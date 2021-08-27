@@ -24,7 +24,7 @@ void USART2_IRQHandler(void)
 	HAL_UART_IRQHandler(&huart2);
 }
 
-
+/* Uncomment when TIM6 IRQ is needed */
 //void TIM6_DAC_IRQHandler(void)
 //{
 //	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);

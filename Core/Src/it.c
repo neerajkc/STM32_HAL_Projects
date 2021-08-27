@@ -25,11 +25,11 @@ void USART2_IRQHandler(void)
 }
 
 
-void TIM6_DAC_IRQHandler(void)
-{
-	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-	HAL_TIM_IRQHandler(&htimer6);
-}
+//void TIM6_DAC_IRQHandler(void)
+//{
+//	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+//	HAL_TIM_IRQHandler(&htimer6);
+//}
 
 
 void TIM2_IRQHandler(void)

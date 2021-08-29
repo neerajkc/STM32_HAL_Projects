@@ -31,8 +31,8 @@ void USART2_IRQHandler(void)
 //	HAL_TIM_IRQHandler(&htimer6);
 //}
 
-
-void TIM2_IRQHandler(void)
-{
-	HAL_TIM_IRQHandler(&htimer2);
-}
+/* Uncomment when TIM2 IRQ is needed */
+//void TIM2_IRQHandler(void)
+//{
+//	HAL_TIM_IRQHandler(&htimer2);
+//}

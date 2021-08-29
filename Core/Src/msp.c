@@ -94,12 +94,12 @@ void HAL_TIM_OC_MspInit(TIM_HandleTypeDef *htim)
 	__HAL_RCC_GPIOB_CLK_ENABLE();
 
 	//2. Configure a gpios to behave as timer2 channel 1, 2, 3, and 4
-	/* PA0  --> TIM2_CH1
+	/* PA0  --> TIM2_CH1	(PA5 for onboard led)
 	 * PA1  --> TIM2_CH2
 	 * PB10 --> TIM2_CH3	- PA2 and PA3 are not free and in use by UART
 	 * PB2  --> TIM2_CH4
 	 */
-	tim2OC_ch_gpios.Pin = GPIO_PIN_0 | GPIO_PIN_1;
+	tim2OC_ch_gpios.Pin = GPIO_PIN_5 | GPIO_PIN_1;
 	tim2OC_ch_gpios.Mode = GPIO_MODE_AF_PP;
 	tim2OC_ch_gpios.Pull = GPIO_NOPULL;
 	tim2OC_ch_gpios.Speed = GPIO_SPEED_FREQ_LOW;
@@ -130,12 +130,12 @@ void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim)
 	__HAL_RCC_GPIOB_CLK_ENABLE();
 
 	//2. Configure a gpios to behave as timer2 channel 1, 2, 3, and 4
-	/* PA0  --> TIM2_CH1
+	/* PA0  --> TIM2_CH1	(PA5 for onboard led)
 	 * PA1  --> TIM2_CH2
 	 * PB10 --> TIM2_CH3	- PA2 and PA3 are not free and in use by UART
 	 * PB2  --> TIM2_CH4
 	 */
-	tim2OC_ch_gpios.Pin = GPIO_PIN_0 | GPIO_PIN_1;
+	tim2OC_ch_gpios.Pin = GPIO_PIN_5 | GPIO_PIN_1;
 	tim2OC_ch_gpios.Mode = GPIO_MODE_AF_PP;
 	tim2OC_ch_gpios.Pull = GPIO_NOPULL;
 	tim2OC_ch_gpios.Speed = GPIO_SPEED_FREQ_LOW;

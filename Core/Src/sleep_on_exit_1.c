@@ -41,7 +41,7 @@ int main(void)
 //	GPIO_AnalogConfig();
 
 	//SCB->SCR |= ( 1 << 1);
-//	HAL_PWR_EnableSleepOnExit();
+	HAL_PWR_EnableSleepOnExit();
 
 	/* lets start with fresh Status register of Timer to avoid any spurious interrupts */
     TIM6->SR = 0;

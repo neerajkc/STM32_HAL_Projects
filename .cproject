@@ -75,11 +75,11 @@
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.498503128" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec"/>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1950981158.1984244226" name="timer_pwm_led.c" rcbsApplicability="disable" resourcePath="Core/Src/timer_pwm_led.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920.1559442319">
-						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920.1559442319" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920"/>
+					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1950981158.456967100" name="can_loopback.c" rcbsApplicability="disable" resourcePath="Core/Src/can_loopback.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920.685660793">
+						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920.685660793" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920"/>
 					</fileInfo>
 					<sourceEntries>
-						<entry excluding="Src/timer_pwm_led.c|Src/timer_OC_PWM_1.c|Src/timer_OC_1.c|Src/timer_IC_1.c|Src/time_base_10micro.c|Src/time_base_100ms_it.c|Src/time_base_100ms.c|Src/pll_sysclk_hse.c|Src/uart2_example_it.c|Src/pll_sysclk_hsi.c|Src/hse_sysclk_8mhz.c|Src/uart2_example.c|Inc/stm32f4xx_it.h" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
+						<entry excluding="Src/can_loopback.c|Src/timer_pwm_led.c|Src/timer_OC_PWM_1.c|Src/timer_OC_1.c|Src/timer_IC_1.c|Src/time_base_10micro.c|Src/time_base_100ms_it.c|Src/time_base_100ms.c|Src/pll_sysclk_hse.c|Src/uart2_example_it.c|Src/pll_sysclk_hsi.c|Src/hse_sysclk_8mhz.c|Src/uart2_example.c|Inc/stm32f4xx_it.h" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 					</sourceEntries>
 				</configuration>

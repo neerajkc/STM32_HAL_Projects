@@ -26,11 +26,13 @@ void USART2_IRQHandler(void)
 }
 
 /* Uncomment when TIM6 IRQ is needed */
-//void TIM6_DAC_IRQHandler(void)
-//{
-//	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-//	HAL_TIM_IRQHandler(&htimer6);
-//}
+void TIM6_DAC_IRQHandler(void)
+{
+	//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_12,GPIO_PIN_SET);
+	HAL_TIM_IRQHandler(&htimer6);
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_12,GPIO_PIN_RESET);
+}
 
 /* Uncomment when TIM2 IRQ is needed */
 //void TIM2_IRQHandler(void)
@@ -38,30 +40,30 @@ void USART2_IRQHandler(void)
 //	HAL_TIM_IRQHandler(&htimer2);
 //}
 
-
-void CAN1_TX_IRQHandler(void)
-{
-	HAL_CAN_IRQHandler(&hcan1);
-
-}
-
-
-void CAN1_RX0_IRQHandler(void)
-{
-	HAL_CAN_IRQHandler(&hcan1);
-
-}
-
-
-void CAN1_RX1_IRQHandler(void)
-{
-	HAL_CAN_IRQHandler(&hcan1);
-
-}
-
-
-void CAN1_SCE_IRQHandler(void)
-{
-	HAL_CAN_IRQHandler(&hcan1);
-
-}
+/* Uncomment when CAN is needed */
+//void CAN1_TX_IRQHandler(void)
+//{
+//	HAL_CAN_IRQHandler(&hcan1);
+//
+//}
+//
+//
+//void CAN1_RX0_IRQHandler(void)
+//{
+//	HAL_CAN_IRQHandler(&hcan1);
+//
+//}
+//
+//
+//void CAN1_RX1_IRQHandler(void)
+//{
+//	HAL_CAN_IRQHandler(&hcan1);
+//
+//}
+//
+//
+//void CAN1_SCE_IRQHandler(void)
+//{
+//	HAL_CAN_IRQHandler(&hcan1);
+//
+//}

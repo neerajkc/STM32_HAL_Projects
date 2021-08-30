@@ -75,11 +75,11 @@
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.498503128" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec"/>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1950981158.1308360219" name="sleep_on_exit_1.c" rcbsApplicability="disable" resourcePath="Core/Src/sleep_on_exit_1.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920.1397337236">
-						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920.1397337236" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920"/>
+					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1950981158.2067075948" name="wfi.c" rcbsApplicability="disable" resourcePath="Core/Src/wfi.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920.1957385649">
+						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920.1957385649" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.674751920"/>
 					</fileInfo>
 					<sourceEntries>
-						<entry excluding="Src/sleep_on_exit_1.c|Src/can_loopback_it.c|Src/can_loopback.c|Src/timer_pwm_led.c|Src/timer_OC_PWM_1.c|Src/timer_OC_1.c|Src/timer_IC_1.c|Src/time_base_10micro.c|Src/time_base_100ms_it.c|Src/time_base_100ms.c|Src/pll_sysclk_hse.c|Src/uart2_example_it.c|Src/pll_sysclk_hsi.c|Src/hse_sysclk_8mhz.c|Src/uart2_example.c|Inc/stm32f4xx_it.h" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
+						<entry excluding="Src/wfi.c|Src/sleep_on_exit_1.c|Src/can_loopback_it.c|Src/can_loopback.c|Src/timer_pwm_led.c|Src/timer_OC_PWM_1.c|Src/timer_OC_1.c|Src/timer_IC_1.c|Src/time_base_10micro.c|Src/time_base_100ms_it.c|Src/time_base_100ms.c|Src/pll_sysclk_hse.c|Src/uart2_example_it.c|Src/pll_sysclk_hsi.c|Src/hse_sysclk_8mhz.c|Src/uart2_example.c|Inc/stm32f4xx_it.h" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 					</sourceEntries>
 				</configuration>

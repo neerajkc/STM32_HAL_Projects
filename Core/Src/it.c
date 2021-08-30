@@ -19,6 +19,11 @@ void SysTick_Handler(void)
 }
 
 
+void EXTI15_10_IRQHandler(void)
+{
+	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
+}
+
 void USART2_IRQHandler(void)
 {
 	/* Uncomment when UART IRQ is needed */
@@ -26,13 +31,13 @@ void USART2_IRQHandler(void)
 }
 
 /* Uncomment when TIM6 IRQ is needed */
-void TIM6_DAC_IRQHandler(void)
-{
-	//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_12,GPIO_PIN_SET);
-	HAL_TIM_IRQHandler(&htimer6);
-	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_12,GPIO_PIN_RESET);
-}
+//void TIM6_DAC_IRQHandler(void)
+//{
+//	//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+////	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_12,GPIO_PIN_SET);
+//	HAL_TIM_IRQHandler(&htimer6);
+////	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_12,GPIO_PIN_RESET);
+//}
 
 /* Uncomment when TIM2 IRQ is needed */
 //void TIM2_IRQHandler(void)

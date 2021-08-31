@@ -277,6 +277,7 @@ char* getDayofweek(uint8_t number)
   */
  void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+	 char* time_format;
 	 RTC_TimeTypeDef RTC_TimeRead;
 	 RTC_DateTypeDef RTC_DateRead;
 
@@ -284,8 +285,17 @@ char* getDayofweek(uint8_t number)
 
 	 HAL_RTC_GetDate(&hrtc,&RTC_DateRead,RTC_FORMAT_BIN);
 
-	 printmsg("Current Time is : %02d:%02d:%02d\r\n",RTC_TimeRead.Hours,\
-			 RTC_TimeRead.Minutes,RTC_TimeRead.Seconds);
+	 if(RTC_TimeRead.TimeFormat == RTC_HOURFORMAT12_AM)
+	 {
+		 time_format = "AM";
+	 }
+	 else
+	 {
+		 time_format = "PM";
+	 }
+
+	 printmsg("Current Time is : %02d:%02d:%02d %s\r\n",RTC_TimeRead.Hours,\
+			 RTC_TimeRead.Minutes,RTC_TimeRead.Seconds,time_format);
 	 printmsg("Current Date is : %02d-%2d-%2d  <%s> \r\n",RTC_DateRead.Month,RTC_DateRead.Date,\
 			 RTC_DateRead.Year,getDayofweek(RTC_DateRead.WeekDay));
 }

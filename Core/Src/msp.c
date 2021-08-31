@@ -8,6 +8,8 @@
 
 #include "main.h"
 
+extern void Error_handler(void);
+
 void HAL_MspInit(void)
 {
 	// Here we do low level processor specific inits.
@@ -186,3 +188,28 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef *hcan)
 
 }
 
+
+void HAL_RTC_MspInit(RTC_HandleTypeDef* hrtc)
+{
+	  RCC_OscInitTypeDef        RCC_OscInitStruct;
+	  RCC_PeriphCLKInitTypeDef RCC_RTCPeriClkInit;
+	  //1. Turn on the LSE
+	  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSE;
+	  RCC_OscInitStruct.LSEState = RCC_LSE_ON;
+	  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+	  if(HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+	  {
+		  Error_handler();
+	  }
+
+	  //2. select LSE as RTCCLK
+	  RCC_RTCPeriClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC;
+	  RCC_RTCPeriClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSE;
+	  if( HAL_RCCEx_PeriphCLKConfig(&RCC_RTCPeriClkInit)!= HAL_OK)
+	  {
+		  Error_handler();
+	  }
+
+	  //3. Enable the RTC Clock
+	  __HAL_RCC_RTC_ENABLE();
+}

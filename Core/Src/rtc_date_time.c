@@ -57,7 +57,21 @@ int main(void)
 
 	printmsg("This is RTC calendar Test program\r\n");
 
-	RTC_CalendarConfig();
+	if(__HAL_PWR_GET_FLAG(PWR_FLAG_SB) != RESET)
+	{
+		__HAL_PWR_CLEAR_FLAG(PWR_FLAG_SB);
+		__HAL_PWR_CLEAR_FLAG(PWR_FLAG_WU);
+		printmsg("Woke up from STANDBY\r\n");
+		HAL_GPIO_EXTI_Callback(0);
+	}
+
+	//RTC_CalendarConfig();
+
+	//Enable the wakeup pin 1 in pwr_csr register
+	HAL_PWR_EnableWakeUpPin(PWR_WAKEUP_PIN1);
+
+	printmsg("Went to STANDBY mode\r\n");
+	HAL_PWR_EnterSTANDBYMode();
 
 	while(1);
 

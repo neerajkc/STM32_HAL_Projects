@@ -11,6 +11,7 @@ extern UART_HandleTypeDef huart2;
 extern TIM_HandleTypeDef htimer6;
 extern TIM_HandleTypeDef htimer2;
 extern CAN_HandleTypeDef hcan1;
+extern RTC_HandleTypeDef hrtc;
 
 void SysTick_Handler(void)
 {
@@ -29,6 +30,15 @@ void USART2_IRQHandler(void)
 	/* Uncomment when UART IRQ is needed */
 	HAL_UART_IRQHandler(&huart2);
 }
+
+
+
+void RTC_Alarm_IRQHandler(void)
+{
+	HAL_RTC_AlarmIRQHandler(&hrtc);
+}
+
+
 
 /* Uncomment when TIM6 IRQ is needed */
 //void TIM6_DAC_IRQHandler(void)
